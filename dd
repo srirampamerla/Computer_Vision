@@ -1,0 +1,12 @@
+Category,Technology Used,Purpose in Your Project
+Frontend UI,Streamlit,"Rapid web application development, handling chat interface, sidebar controls, and state management."
+Orchestration,LangChain,"Managing the logic flow, chaining prompts, handling retrievers, and connecting LLMs to tools."
+LLM Provider,Groq,Ultra-fast inference API. Used for Llama 3.1 (Chat/RAG) and Gemma 2 (Web Search/Correction).
+Embeddings,HuggingFace,all-MiniLM-L6-v2. Converts text into vector representations for semantic search.
+Vector Database,FAISS (CPU),Stores document embeddings for fast similarity search (Dense Retrieval).
+Retrieval Algorithms,BM25 & Ensemble,BM25 for keyword search. EnsembleRetriever combines FAISS + BM25 for hybrid search accuracy.
+Reranking,Cross-Encoder,ms-marco-MiniLM-L-6-v2. Re-scores retrieved documents based on deep semantic relevance.
+Web Search,Tavily API,Optimized search engine for AI agents to fetch real-time data from the web.
+Safety & Guardrails,Microsoft Presidio,Detects and handles PII (Personally Identifiable Information).
+Safety & Guardrails,Detoxify,"Detects toxic, biased, or harmful language in user inputs."
+Audio/Vision,Whisper & Llama Vision,Whisper (via Groq) for speech-to-text; Llama Vision (via Groq) for image analysis.
