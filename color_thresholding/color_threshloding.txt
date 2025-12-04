@@ -1,0 +1,30 @@
+color thrsholding is a technique to filter out a specific rnage of colors in an image by defining upper nad lower bounds in color space. 
+We use it to segment,replace or isolate specific colors in an image.
+
+Targetting. In terns of hsc i am picking some particular red. if i change the brightness of the particular color. in HSV it will chnage only V
+so we can seperate from brightness.
+HSV is used for better color Targetting
+RGB-> it will impact on three colors
+V-> Vertical part and S-horozontal part inveted cone(H has 0 to 360)
+
+    Actual      Open CV 8%denote inters of colore
+H--0-360  -     0-179
+S--0-100%-      0-255
+V-- 0 -100%     0-255
+
+RGB - # channels RGBHSV
+Hue we need to change to convert into mask
+
+if we need to traget green we need upper bond and lowerbound
+upper bound -121 degree lower 119degree between this we cna use
+
+Hue has {[[20,55,80],[5,100,178],[104,52,60],[10,166,10]]}  form the image. if any one value is matched in the range{119-121} we will
+keep it 1 else zero
+
+it will be one channels. we will see balck and white (that will be binary values)
+
+I want to pink color (By default open cv it has BGR). we will convert into HSV because at the end we want tot target interns of HSV
+if the mask greater than zero we will chnage if it zero we wcann keep it as it is.
+if the mask has one  we will change to pink colorwhevwer it s black we will keep it as same
+
+0_black and 1-white 0_> Orginal image and 1 -> Masked image  
